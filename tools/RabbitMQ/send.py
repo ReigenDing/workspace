@@ -19,8 +19,7 @@ message = ' '.join(sys.argv[1:]) or "Hello World!"
 channel.basic_publish(exchange='',
                       routing_key='task_queue',
                       body=message,
-                      properties=pika.BasicProperties(
-                         deliv                      ))
+                      properties=pika.BasicProperties(delivery_mode=None))
 print(" [x] Sent %r" % message)
 connection.close()
 ery_mode=2,  # make message persistent

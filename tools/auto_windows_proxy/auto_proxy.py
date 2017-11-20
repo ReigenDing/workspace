@@ -143,25 +143,31 @@ def check_proxy(proxy=None):
 if __name__ == "__main__":
     # switch_ie_proxy('183.222.102.106:8080', switch=0)
     # print check_proxy('127.0.0.1:1080')
-    init_proxy()
-    while True:
-        try:
-            proxy_list = get_proxy(limit_num=3000)
-            for ip in proxy_list:
-                rst = check_proxy(ip)
-                if rst is None:
-                    continue
-                _proxy, wait_load_time = rst
-                logger.debug(u'使用代理 {ip}'.format(ip=_proxy))
-                switch_ie_proxy(_proxy, switch=1)
-                open_ie()
-                logger.debug(u"等待页面加载 {0}s".format(wait_load_time + 2))
-                time.sleep(wait_load_time + 2)
-                # 启动广告点击脚本
-                subprocess.call(r'C:\Users\Administrator\Desktop\run_auto\ad.exe')
-                time.sleep(10)
-                # 关闭代理
-                switch_ie_proxy(_proxy, switch=0)
-                close_ie()
-        except Exception as e:
-            print e
+    # init_proxy()
+    # while True:
+    #     try:
+    #         proxy_list = get_proxy(limit_num=3000)
+    #         for ip in proxy_list:
+    #             rst = check_proxy(ip)
+    #             if rst is None:
+    #                 continue
+    #             _proxy, wait_load_time = rst
+    #             logger.debug(u'使用代理 {ip}'.format(ip=_proxy))
+    #             switch_ie_proxy(_proxy, switch=1)
+    #             open_ie()
+    #             logger.debug(u"等待页面加载 {0}s".format(wait_load_time + 2))
+    #             time.sleep(wait_load_time + 2)
+    #             # 启动广告点击脚本
+    #             subprocess.call(r'C:\Users\Administrator\Desktop\run_auto\ad.exe')
+    #             time.sleep(10)
+    #             # 关闭代理
+    #             switch_ie_proxy(_proxy, switch=0)
+    #             close_ie()
+    #     except Exception as e:
+    #         print e
+    proxy_list = get_proxy(limit_num=100)
+    for ip in proxy_list:
+        rst = check_proxy(ip)
+        if rst is None:
+            continue
+        print ip
