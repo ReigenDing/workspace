@@ -22,7 +22,7 @@ class MQConsumer(threading.Thread):
 
 def producer():
     # connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
-    url = 'amqp://admin:elecfans@queue.elecfans.net:5672/'
+    url = 'amqp://guest:guest@localhost:5672/'
     connection = pika.BlockingConnection(pika.URLParameters(url))
     channel = connection.channel()
     channel.queue_declare(queue='bbs_msg_queue', durable=True)
