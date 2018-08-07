@@ -23,4 +23,4 @@ def list_squared(start, stop):
 
 
 if __name__ == "__main__":
-    print list_squared(1, 5)
+    print(list_squared(1, 5))

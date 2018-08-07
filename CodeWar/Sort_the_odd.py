@@ -1,11 +1,4 @@
-# def sort_array(source_array):
-#     for idx in range(len(source_array)):
-#         for idy in range(len(source_array) - idx - 1):
-#             if source_array[idy] > source_array[idy + 1]:
-#                 source_array[idy], source_array[idy + 1] = source_array[idy + 1], source_array[idy]
-#     return source_array
-
-
+# -*- coding: utf-8 -*-
 def sort_array(source_array):
     odd_array = [list(odd) for odd in enumerate(source_array) if odd[1] % 2 == 1]
     for idx in range(len(odd_array)):
@@ -28,4 +21,4 @@ def sort_array_better2(source_array):
 
 
 if __name__ == "__main__":
-    print sort_array([5, 3, 2, 8, 1, 4])
+    print(sort_array([5, 3, 2, 8, 1, 4]))

@@ -4,7 +4,8 @@
 
 
 class Solution(object):
-    def twoSum(self, nums, target):
+    @staticmethod
+    def two_sum(nums, target):
         """
         :type nums: List[int]
         :type target: int
@@ -15,7 +16,6 @@ class Solution(object):
             return False
         num_dict = {}
         for i in range(len(nums)):
-            print num_dict
             if nums[i] in num_dict:
                 return [num_dict[nums[i]], i]
             else:
@@ -23,4 +23,4 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    print Solution().twoSum([3,9,4,5,7,9,4,3,6], 13)
+    print(Solution().two_sum([3, 9, 4, 5, 7, 9, 4, 3, 6], 13))
