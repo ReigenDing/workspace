@@ -15,20 +15,17 @@ import urlparse
 import random
 import logging
 import copy
-import math
 
-from string import ascii_lowercase
 # scrapy import
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
-from scrapy.exceptions import DropItem, IgnoreRequest, CloseSpider
-from scrapy.http import Request, FormRequest, HtmlResponse
+from scrapy.exceptions import DropItem, IgnoreRequest
+from scrapy.http import Request
 from scrapy.utils.python import to_bytes
 
 # lmxl
 import lxml.html
-from w3lib.html import remove_tags
 
 sys.__APP_LOG__ = False
 try:
@@ -38,8 +35,7 @@ except ImportError:
     print sys.path[0]
     import config
 
-from tools import box as util
-from tools import Format
+from practices import box as util
 
 logger = logging.getLogger(__name__)
 

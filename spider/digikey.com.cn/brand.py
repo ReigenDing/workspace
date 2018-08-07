@@ -8,7 +8,7 @@ import json
 import lxml.html
 import requests
 import threading
-from tools import box as util
+from practices import box as util
 
 DEFAULT_HEADERS = {
     'Host': 'www.digikey.com.cn',
