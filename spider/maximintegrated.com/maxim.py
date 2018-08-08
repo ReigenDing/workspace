@@ -2,7 +2,7 @@
 import re
 import json
 import requests
-from tools import box
+from practices import box
 from w3lib.html import remove_tags
 
 headers = """

@@ -4,7 +4,7 @@ import json
 import urllib
 import copy
 import requests
-from tools.box import get_pwd
+from practices.box import get_pwd
 from bs4 import BeautifulSoup
 
 headers = {

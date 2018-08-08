@@ -3,10 +3,10 @@
 # Created by Vin on 2017/5/2
 
 import requests
-from tools.incapsula_cracker import incapsula_parse, IncapSession
+from practices.incapsula_cracker import incapsula_parse, IncapSession
 import json
 import re
-from tools.box import headers_to_dict
+from practices.box import headers_to_dict
 _headers = headers_to_dict("""Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 Accept-Encoding:gzip, deflate, sdch, br
 Accept-Language:en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4

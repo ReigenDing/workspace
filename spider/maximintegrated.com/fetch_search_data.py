@@ -4,7 +4,7 @@
 import requests
 from urllib import quote
 import urlparse
-from tools import box
+from practices import box
 
 headers = """
 accept:application/json, text/javascript, */*; q=0.01

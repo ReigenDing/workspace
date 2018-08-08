@@ -1,7 +1,5 @@
 # coding=utf-8
-import requests
-from tools import Format
-from tools import box
+from practices import box
 
 # -*- coding: utf-8 -*-
 
@@ -11,28 +9,20 @@ requirements:
     lxml
 """
 
-import os
 import re
 import sys
 import argparse
 import random
 import logging
 import hashlib
-import json
 import copy
-import time
-import math
 # scrapy import
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
-from scrapy.exceptions import DropItem, IgnoreRequest, CloseSpider
-from scrapy.pipelines.files import FilesPipeline
-from scrapy.http import Request, FormRequest, HtmlResponse
+from scrapy.exceptions import DropItem, IgnoreRequest
 from scrapy.utils.python import to_bytes
 # lxml
-import lxml.html
-from w3lib.html import remove_tags
 
 logger = logging.getLogger(__name__)
 

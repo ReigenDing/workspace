@@ -1,6 +1,6 @@
 # coding=utf-8
 
-from tools import box
+from practices import box
 
 headers = """
 Host: www.microchipdirect.com

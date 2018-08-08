@@ -6,7 +6,6 @@ import re
 import urlparse
 import requests
 from bs4 import BeautifulSoup
-from tools.Format import text_filter, clear_text
 
 with open(r'detail_1.html', 'r') as fp:
     html_1 = fp.read()

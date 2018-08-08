@@ -6,7 +6,7 @@ import logging
 import hashlib
 import urlparse
 import requests
-from tools import box
+from practices import box
 from bs4 import BeautifulSoup
 
 _logger = logging.getLogger('hqchip_spider')

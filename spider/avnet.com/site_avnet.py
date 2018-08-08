@@ -37,7 +37,7 @@ except ImportError:
     print sys.path[0]
     import config
 
-from tools import box as util
+from practices import box as util
 
 logger = logging.getLogger(__name__)
 

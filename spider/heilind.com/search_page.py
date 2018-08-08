@@ -7,7 +7,7 @@ import config
 import requests
 import urlparse
 import lxml.html
-from tools import box as util
+from practices import box as util
 
 proxies = {
     'http': 'http://127.0.0.1:1080',

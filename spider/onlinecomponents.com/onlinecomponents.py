@@ -2,7 +2,7 @@
 import re
 # from incapsula import crack, IncapSession
 import requests
-from tools.incapsula_cracker import IncapSession
+from practices.incapsula_cracker import IncapSession
 from bs4 import BeautifulSoup, SoupStrainer
 
 _headers = {
